@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Solicitud de Crédito</title>
+    <link rel="icon" href="img/logodejarmedical-1.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+
+      <div class="image-container">
+        <a href="https://www.jarmedical.com/" target="_blank">
+            <img src="img/LogoOficialJAR_small.png" alt="Descripción de la imagen" class="medium-image">
+        </a>
+      </div>
+
+        <h1>Actualización de Datos</h1>
+
+        <select id="tipo-persona" onchange="toggleForms()" class="opcion">
+            <option value="">Seleccione Tipo de Persona</option>
+            <option value="fisica">Persona Física</option>
+            <option value="moral">Persona Moral</option>
+        </select>
+
+        <div id="social-section" class="social-section">
+          <h3>Síguenos en nuestras redes sociales</h3>
+          <div id="social-icons" class="social-icons">
+            <a href="https://www.facebook.com/jarmedicalmx/" target="_blank">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/jarmedical/" target="_blank">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.youtube.com/@JARMedical" target="_blank">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube">
+            </a>
+          </div>
+        </div>
+
+        <form action="https://formspree.io/f/xeoqjadj" method="post">
+
+        <div id="form-fisica" class="formulario oculto">
+            <h2 class="form-section">Datos de Persona Física</h2>
+
+            <div class="form-group">
+              <label for="nombre">Nombre Completo:</label>
+              <input type="text" id="nombre" name="PERSONA FISICA" placeholder="NOMBRE COMPLETO" required>
+            </div>
+
+            <div class="form-group">
+              <label for="rfc">RFC:</label>
+              <input type="text" id="rfc" name="RFC PERSONA FISICA" placeholder="INGRESAR RFC SIN ESPACIOS" required maxlength="13" style="text-transform: uppercase;">
+              <a href="https://www.sat.gob.mx/aplicacion/operacion/31274/consulta-tu-clave-de-rfc-mediante-curp" target="_blank" class="ax">Consulta tu RFC aquí</a>  
+            </div>
+
+            <div class="form-group">
+              <label for="curp">CURP:</label>
+              <input type="text" id="curp" name="CURP PERSONA FISICA" placeholder="INGRESAR CURP SIN ESPACIOS" required maxlength="18" style="text-transform: uppercase;">
+              <a href="https://www.gob.mx/curp/" target="_blank" class="ax">Consulta tu CURP aquí</a>
+            </div>
+
+            <div class="form-group">
+              <label for="direccion">Dirección:</label>
+              <input type="text" id="direccion" name="DIRECCION" placeholder="DIRECCION" required>
+            </div>
+
+            <div class="radiop">
+              <label>
+                  <input type="radio" name="tipo_propiedad" value="oficina" required>
+                  Oficina
+              </label>
+      
+              <label>
+                  <input type="radio" name="tipo_propiedad" value="local_comercial" required>
+                  Local Comercial
+              </label>
+      
+              <label>
+                  <input type="radio" name="tipo_propiedad" value="propio" required>
+                  Propio
+              </label>
+      
+              <label>
+                  <input type="radio" name="tipo_propiedad" value="rentado" required>
+                  Rentado
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label for="domicilio">Tiempo de estar en este domicilio:</label>
+              <input type="text" id="domicilio" name="TIEMPO DE ESTAR EN ESTE DOMICILIO" placeholder="2 años" required>
+            </div>
+
+            <div class="form-group">
+              <label for="direccion">Codigo Postal:</label>
+              <input type="number" id="direccion" name="CODIGO POSTAL" placeholder="C.P" required>
+            </div>
+
+            <div class="form-group">
+              <label for="direccion">Estado:</label>
+              <input type="text" id="direccion" name="ESTADO" placeholder="NUEVO LEON" required>
+            </div>
+
+            <div class="form-group">
+              <label for="telefono">Teléfono 1:</label>
+              <input type="tel" id="telefono" name="TELEFONO 1" placeholder="81-1234-5678" required>
+            </div>
+
+              <div class="form-group">
+                <label for="telefono">Teléfono 2:</label>
+                <input type="tel" id="telefono" name="TELEFONO 2"  placeholder="81-1234-5678">
+              </div>
+
+              <div class="form-group">
+                <label for="telefono">Teléfono 3:</label>
+                <input type="tel" id="telefono" name="TELEFONO 3"  placeholder="81-1234-5671">
+              </div>
+
+              <div class="form-group">
+                <label for="telefono">Teléfono fax:</label>
+                <input type="tel" id="telefono" name="TELEFONO FAX" placeholder="81-1234-5673">
+              </div>
+        
+              <h2>Bienes</h2>
+        
+              <div class="form-group">
+                <label for="vehiculo1">Vehículo 1 (Marca, Modelo)</label>
+                <input type="text" id="vehiculo1" name="VHEICULO1" placeholder="volkswagen 2012 Clasico">
+              </div>
+            
+              <div class="form-group">
+                <label for="placas1">No. Placas</label>
+                <input type="text" id="placas1" name="No. De Placas" placeholder="AA-000-AAA">
+              </div>
+            
+              <div class="form-group">
+                <label for="valorComercialVehiculo1">Valor Comercial</label>
+                <input type="text" id="VALOR COMERCIAL" name="VALOR COMERCIAL 1" placeholder="$140,000.00">
+              </div>
+            
+              <div class="form-group">
+                <label for="vehiculo2">Vehículo 2 (Marca, Modelo)</label>
+                <input type="text" id="vehiculo2" name="VHEICULO2" placeholder="MAZDA CX-30 2024">
+              </div>
+            
+              <div class="form-group">
+                <label for="placas2">No. Placas</label>
+                <input type="text" id="placas2" name="No. De Placas 2" placeholder="AA-000-AAA">
+              </div>
+            
+              <div class="form-group">
+                <label for="valorComercialVehiculo2">Valor Comercial</label>
+                <input type="text" id="VALOR COMERCIAL 2" name="VALOR COMERCIAL 2" placeholder="$140,000.00">
+              </div>
+            
+              <div class="form-group">
+                <label for="escritura">Inmueble (No. Escritura)</label>
+                <input type="text" id="escritura" name="No. De Estricura (INMUEBLE)" placeholder="INMUEBLE (No. ESTRUCTURA)">
+              </div>
+        
+              <div class="form-group">
+                <label for="volumen">Volumen</label>
+                <input type="text" id="volumen" name="VOLUMEN $" placeholder="No. DE VOLUMEN">
+              </div>
+        
+              <div class="form-group">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="FECHA">
+              </div>
+        
+              <div class="form-group">
+                <label for="notario">Notario</label>
+                <input type="text" id="notario" name="NOTARIO" placeholder="NOMBRE DEL NOTARIO PUBLICO">
+              </div>
+        
+              <div class="form-group">
+                <label for="no">No.</label>
+                <input type="text" id="no" name="No." placeholder="NUMERO DE NOTARIA">
+              </div>
+        
+              <div class="form-group">
+                <label for="de">De</label>
+                <input type="text" id="de" name="DE" placeholder="CIUDAD">
+              </div>
+            
+              <div class="form-group">
+                <label for="valorComercialInmueble">Valor Comercial</label>
+                <input type="text" id="valorComercialInmueble" name="VALOR COMERCIAL 3" placeholder="$">
+            </div>
+            
+              <div class="form-group">
+                <label for="descripcion">Descripción del Inmueble</label>
+                <textarea id="descripcion" name="DESCRIPCION" placeholder="BREVE DESCRIPCION"></textarea>
+              </div>
+        
+              <div>
+                <h2>Referencias Bancarias</h2>
+
+                <div class="form-group">
+                  <label for="institucion">Institución 1:</label>
+                  <input type="text" id="institucion" name="INSTITUCION1" placeholder="INSTITUCION" required>
+              </div>
+              <div class="form-group">
+                  <label for="tipo-cuenta">Tipo de Cuenta:</label>
+                  <input type="text" id="tipo-cuenta" name="TIPO DE CUENTA1" placeholder="TIPO DE CUENTA">
+              </div>
+              <div class="form-group">
+                  <label for="numero">Número:</label>
+                  <input type="text" id="numero" name="NUMERO DE CUENTA1" placeholder="NUMERO">
+              </div>
+              <div class="form-group">
+                  <label for="saldo-promedio">Saldo Promedio:</label>
+                  <input type="text" id="saldo-promedio" name="SALDO PROMEDIO1" placeholder="$">
+              </div>
+              <div class="form-group">
+                  <label for="gerente">Gerente:</label>
+                  <input type="text" id="gerente" name="GERENTE1" placeholder="GERENTE">
+              </div>
+              <div class="form-group">
+                  <label for="telefono">Teléfono:</label>
+                  <input type="tel" id="telefono" name="TELEFONO1" placeholder="81-1234-5671">
+              </div>
+
+              <div class="form-group">
+                <label for="institucion">Institución 2:</label>
+                <input type="text" id="institucion" name="INSTITUCION1" placeholder="INSTITUCION">
+            </div>
+            <div class="form-group">
+                <label for="tipo-cuenta">Tipo de Cuenta:</label>
+                <input type="text" id="tipo-cuenta" name="TIPO DE CUENTA2" placeholder="TIPO DE CUENTA">
+            </div>
+            <div class="form-group">
+                <label for="numero">Número:</label>
+                <input type="text" id="numero" name="NUMERO DE CUENTA2" placeholder="NUMERO">
+            </div>
+            <div class="form-group">
+                <label for="saldo-promedio">Saldo Promedio:</label>
+                <input type="text" id="saldo-promedio" name="SALDO PROMEDIO2" placeholder="$">
+            </div>
+            <div class="form-group">
+                <label for="gerente">Gerente:</label>
+                <input type="text" id="gerente" name="GERENTE2" placeholder="GERENTE">
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="TELEFONO2" placeholder="81-1234-5671">
+            </div>
+              </div>
+        
+                <div>
+                    <h2>Referencias Comerciales</h2>
+                    <div class="form-group">
+                      <label for="proveedor1">Proveedor 1:</label>
+                      <input type="text" id="proveedor1" name="PROVEEDOR1" placeholder="PROVEEDOR">
+                  </div>
+                  <div class="form-group">
+                      <label for="contacto1">Nombre del Contacto:</label>
+                      <input type="text" id="contacto1" name="NOMBRE DEL CONTACTO1" placeholder="CONTACTO">
+                  </div>
+                  <div class="form-group">
+                      <label for="telefono1">Teléfono:</label>
+                      <input type="tel" id="telefono1" name="TELEFONO1" placeholder="81-1234-5674">
+                  </div>
+                  <div class="form-group">
+                      <label for="credito1">Línea de Crédito:</label>
+                      <input type="text" id="credito1" name="CREDITO1" placeholder="LIENA DE CREDITO">
+                  </div>
+                  <div class="form-group">
+                      <label for="plazo1">Plazo:</label>
+                      <input type="text" id="plazo1" name="PLAZO1" placeholder="PLAZO">
+                  </div>
+                  <div class="form-group">
+                      <label for="cliente1">Número de Cliente:</label>
+                      <input type="text" id="cliente1" name="NUMERO DE CLIENTE1" placeholder="NUMERO DE CLIENTE">
+                  </div>
+          
+                  <!-- Segundo conjunto de campos -->
+                  <div class="form-group">
+                      <label for="proveedor2">Proveedor 2:</label>
+                      <input type="text" id="proveedor2" name="PROVEEDOR2" placeholder="PROVEEDOR">
+                  </div>
+                  <div class="form-group">
+                      <label for="contacto2">Nombre del Contacto:</label>
+                      <input type="text" id="contacto2" name="NOMBRE DEL CONTACTO2" placeholder="NOMBRE DEL CONTACTO">
+                  </div>
+                  <div class="form-group">
+                      <label for="telefono2">Teléfono:</label>
+                      <input type="tel" id="telefono2" name="TELEFONO2" placeholder="81-1289-5671">
+                  </div>
+                  <div class="form-group">
+                      <label for="credito2">Línea de Crédito:</label>
+                      <input type="text" id="credito2" name="CREDITO2" placeholder="LINEA DE CREDITO">
+                  </div>
+                  <div class="form-group">
+                      <label for="plazo2">Plazo:</label>
+                      <input type="text" id="plazo2" name="PLAZO2" placeholder="PLAZO">
+                  </div>
+                  <div class="form-group">
+                      <label for="cliente2">Número de Cliente:</label>
+                      <input type="text" id="cliente2" name="NUMERO DE CLIENTE2" placeholder="NUMERO DE CLIENTE">
+                  </div>
+          
+                  <!-- Tercer conjunto de campos -->
+                  <div class="form-group">
+                      <label for="proveedor3">Proveedor 3:</label>
+                      <input type="text" id="proveedor3" name="PROVEEDOR3" placeholder="PROVEEDOR">
+                  </div>
+                  <div class="form-group">
+                      <label for="contacto3">Nombre del Contacto:</label>
+                      <input type="text" id="contacto3" name="NOMBRE DEL CONTACTO3" placeholder="NOMBRE DEL CONTACTO">
+                  </div>
+                  <div class="form-group">
+                      <label for="telefono3">Teléfono:</label>
+                      <input type="tel" id="telefono3" name="TELEFONO3" placeholder="81-1234-9071">
+                  </div>
+                  <div class="form-group">
+                      <label for="credito3">Línea de Crédito:</label>
+                      <input type="text" id="credito3" name="LINEA DE CREDITO3" placeholder="LIENA DE CREDITO">
+                  </div>
+                  <div class="form-group">
+                      <label for="plazo3">Plazo:</label>
+                      <input type="text" id="plazo3" name="PLAZO3" placeholder="PLAZO">
+                  </div>
+                  <div class="form-group">
+                      <label for="cliente3">Número de Cliente:</label>
+                      <input type="text" id="cliente3" name="NUMERO DE CLIENTE3" placeholder="NUMERO DE CLIENTE">
+                  </div>
+                  </div><br>
+      
+            <button type="button" onclick="printForm()">Imprimir Formulario</button>
+            <input type="submit" value="Enviar por correo electrónico">
+        </div>
+      </form>
+
+         <form action="https://formspree.io/f/xeoqjadj" method="post">      
+        <div id="form-moral" class="formulario oculto">
+            <h2>Datos de Persona Moral</h2>
+
+            <div class="form-group">
+              <label for="razonSocial">Razón Social:</label>
+              <input type="text" id="razonSocial" name="PERSONA MORAL" placeholder="NOMBRE DE LA EMPRESA" required>
+            </div>
+
+            <div class="form-group">
+              <label for="rfcMoral">RFC:</label>
+              <input type="text" id="rfcMoral" name="RFC DE PERSONA MORAL" placeholder="INGRESAR RFC SIN ESPACIOS" required maxlength="12" style="text-transform: uppercase;">
+            </div>
+
+            <div class="form-group">
+              <label for="direccion">Dirección:</label>
+              <input type="text" id="direccion" name="DIRECCION" placeholder="DIRECCION" required>
+            </div>
+
+            <div class="radiop">
+              <label>
+                  <input type="radio" name="tipo_propiedad" value="oficina" required>
+                  Oficina
+              </label>
+      
+              <label>
+                  <input type="radio" name="tipo_propiedad" value="local_comercial" required>
+                  Local Comercial
+              </label>
+      
+              <label>
+                  <input type="radio" name="tipo_propiedad" value="propio" required>
+                  Propio
+              </label>
+      
+              <label>
+                  <input type="radio" name="tipo_propiedad" value="rentado" required>
+                  Rentado
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label for="domicilio">Tiempo de estar en este domicilio:</label>
+              <input type="text" id="domicilio" name="TIEMPO DE ESTAR EN ESTE DOMICILIO" placeholder="2 años" required>
+            </div>
+
+            <div class="form-group">
+              <label for="direccion">Codigo Postal:</label>
+              <input type="number" id="direccion" name="CODIGO POSTAL" placeholder="C.P" required>
+            </div>
+
+            <div class="form-group">
+              <label for="direccion">Estado:</label>
+              <input type="text" id="direccion" name="ESTADO" placeholder="NUEVO LEON" required>
+            </div>
+
+            <div class="form-group">
+              <label for="telefono">Teléfono 1:</label>
+              <input type="tel" id="telefono" name="TELEFONO1" placeholder="81-1234-5678" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono 2:</label>
+                <input type="tel" id="telefono" name="TELEFONO2"  placeholder="81-1234-5678">
+              </div>
+
+              <div class="form-group">
+                <label for="telefono">Teléfono 3:</label>
+                <input type="tel" id="telefono" name="TELEFONO3"  placeholder="81-1234-5671">
+              </div>
+
+              <div class="form-group">
+                <label for="telefono">Teléfono fax:</label>
+                <input type="tel" id="telefono" name="TELEFONO FAX" placeholder="81-1234-5673">
+              </div>
+        
+              <h2>Bienes</h2>
+        
+              <div class="form-group">
+                <label for="vehiculo1">Vehículo 1 (Marca, Modelo)</label>
+                <input type="text" id="vehiculo1" name="VHEICULO1" placeholder="volkswagen 2012 Clasico">
+              </div>
+            
+              <div class="form-group">
+                <label for="placas1">No. Placas</label>
+                <input type="text" id="placas1" name="No.De Placas" placeholder="AA-000-AAA">
+              </div>
+            
+              <div class="form-group">
+                <label for="valorComercialVehiculo1">Valor Comercial</label>
+                <input type="text" id="VALOR COMERCIAL 1" name="VALOR COMERCIAL 1" placeholder="$140,000.00">
+              </div>
+            
+              <div class="form-group">
+                <label for="vehiculo2">Vehículo 2 (Marca, Modelo)</label>
+                <input type="text" id="vehiculo2" name="VHEICULO2" placeholder="MAZDA CX-30 2024">
+              </div>
+            
+              <div class="form-group">
+                <label for="placas2">No. Placas</label>
+                <input type="text" id="placas2" name="No. De Placas" placeholder="AA-000-AAA">
+              </div>
+            
+              <div class="form-group">
+                <label for="valorComercialVehiculo2">Valor Comercial</label>
+                <input type="text" id="VALOR COMERCIAL 3" name="VALOR COMERCIAL 2" placeholder="$140,000.00">
+              </div>
+            
+              <div class="form-group">
+                <label for="escritura">Inmueble (No. Escritura)</label>
+                <input type="text" id="escritura" name="No. DE ESTRUCTURA (INMUEBLE)" placeholder="INMUEBLE (No. ESTRUCTURA)">
+              </div>
+        
+              <div class="form-group">
+                <label for="volumen">Volumen</label>
+                <input type="text" id="volumen" name="VOLUMEN 1" placeholder="No. DE VOLUMEN">
+              </div>
+        
+              <div class="form-group">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="FECHA">
+              </div>
+        
+              <div class="form-group">
+                <label for="notario">Notario</label>
+                <input type="text" id="notario" name="NOTARIO" placeholder="NOMBRE DEL NOTARIO PUBLICO">
+              </div>
+        
+              <div class="form-group">
+                <label for="no">No.</label>
+                <input type="text" id="no" name="No." placeholder="NUMERO DE NOTARIA">
+              </div>
+        
+              <div class="form-group">
+                <label for="de">De</label>
+                <input type="text" id="de" name="DE" placeholder="CIUDAD">
+              </div>
+            
+              <div class="form-group">
+                <label for="valorComercialInmueble">Valor Comercial</label>
+                <input type="text" id="valorComercialInmueble" name="VALOR COMERCIAL 3" placeholder="$">
+            </div>
+            
+            <div class="form-group">
+                <label for="descripcion">Descripción del Inmueble</label>
+                <textarea id="descripcion" name="DESCRIPCION" placeholder="BREVE DESCRIPCION"></textarea>
+            </div>
+        
+            <h2>Información Del Acta Constitutiva De La Persona Moral</h2>
+
+            <div class="form-group">
+                <label for="escrituraNo">Escritura No:</label>
+                <input type="text" id="escrituraNo" name="ESTRUCTURA No" placeholder="No.">
+            </div>
+
+            <div class="form-group">
+                <label for="fechaConstitucion">Fecha Constitución:</label>
+                <input type="date" id="fechaConstitucion" name="FECHA CONSTITUCION">
+            </div>
+
+            <div class="form-group">
+                <label for="regPublicoComer">Reg. Público Comercio:</label>
+                <input type="text" id="regPublicoComer" name="REG. PUBLICO COMERCIAL" placeholder="REG. PUBLICO COMERCIO">
+            </div>
+
+            <div class="form-group">
+                <label for="nombreNotario">Nombre Notario:</label>
+                <input type="text" id="nombreNotario" name="NOMBRE DEL NOTARIO PUBLICO" placeholder="NOMBRE DEL NOTARIO PUBLICO">
+            </div>
+
+            <div class="form-group">
+                <label for="numeroNotaria">Número Notaría:</label>
+                <input type="text" id="numeroNotaria" name="NUMERO DE NOTARIA" placeholder="NUMERO DE NOTARIA">
+            </div>
+
+            <div class="form-group">
+              <label for="direccion">Ciudad:</label>
+              <input type="text" id="ciudad" name="CIUDAD" placeholder="CIUDAD">
+            </div>
+      
+            <h2>Información del Apoderado</h2>
+
+          <div class="form-group">
+              <label for="guardian1Name">Nombre:</label>
+              <input type="text" id="guardian1Name" name="NOMBRE COMPLETO REPRESENTANTE LEGAL" placeholder="NOMBRE COMPLETO REPRESENTANTE LEGAL" required>
+          </div>
+
+          <div class="form-group">
+              <label for="direccion">Dirección:</label>
+              <input type="text" id="direccion" name="DIRECCION" placeholder="CALLE Y NUMERO" required>
+          </div>
+
+            <div class="form-group">
+              <label for="guardian1Province">Provincia:</label>
+              <input type="text" id="guardian1Province" name="PROVINCIA" placeholder="ESTADO DE LA REPUBLICA">
+            </div>
+
+            <div class="form-group">
+              <label for="codigoPostal">Código Postal:</label>
+              <input type="text" id="codigoPostal" name="CODIGO POSTAL" placeholder="CP">
+            </div>
+
+            <div class="form-group">
+              <label for="guardian1WorkPhone">Teléfono de trabajo:</label>
+              <input type="tel" id="guardian1WorkPhone" name="TELEFONO DE TRABAJO" placeholder="81-1234-5678" required>
+            </div>
+
+            <div class="form-group">
+              <label for="guardian1Mobile">Teléfono móvil:</label>
+              <input type="tel" id="guardian1Mobile" name="TELEFONO MOVIL" placeholder="(81)-1234-5645">
+            </div>
+
+            <div class="form-group">
+              <label for="correo">Correo Electronico:</label>
+              <input type="text" id="correo" name="CORREO ELECTRONICO" placeholder="EMAIL" required>
+            </div>
+
+            <h2>Información del Encaragdo De Pagos</h2>
+
+            <div class="form-group">
+                <label for="guardian1Name">Nombre:</label>
+                <input type="text" id="guardian1Name" name="NOMBRE COMPLETO DEL ENCARGADO DE PAGOS" placeholder="NOMBRE COMPLETO DEL ENCARGADO DE PAGOS" required>
+            </div>
+  
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="DIRECCION" placeholder="CALLE Y NUMERO" required>
+            </div>
+  
+              <div class="form-group">
+                <label for="guardian1Province">Provincia:</label>
+                <input type="text" id="guardian1Province" name="PROVINCIA" placeholder="ESTADO DE LA REPUBLICA">
+              </div>
+  
+              <div class="form-group">
+                <label for="codigoPostal">Código Postal:</label>
+                <input type="text" id="codigoPostal" name="CODIGO POSTAL" placeholder="CP">
+              </div>
+  
+              <div class="form-group">
+                <label for="guardian1WorkPhone">Teléfono de trabajo:</label>
+                <input type="tel" id="guardian1WorkPhone" name="TELEFONO DE TRABAJO" placeholder="81-1234-5678" required>
+              </div>
+  
+              <div class="form-group">
+                <label for="guardian1Mobile">Teléfono móvil:</label>
+                <input type="tel" id="guardian1Mobile" name="TELEFONO MOVIL" placeholder="(81)-1234-5645">
+              </div>
+  
+              <div class="form-group">
+                <label for="correo">Correo Electronico:</label>
+                <input type="text" id="correo" name="CORREO ELECTRONICO" placeholder="EMAIL" required>
+              </div>
+
+              <h2>Información Del Encargado De Revision De Facturas</h2>
+
+              <div class="form-group">
+                  <label for="guardian1Name">Nombre:</label>
+                  <input type="text" id="guardian1Name" name="NOMBRE COMPLETO DEL ENCARGADO DE REVISION DE FACTURAS" placeholder="NOMBRE COMPLETO DEL ENCARGADO DE REVISION DE FACTURAS" required>
+              </div>
+    
+              <div class="form-group">
+                  <label for="direccion">Dirección:</label>
+                  <input type="text" id="direccion" name="DIRECCION" placeholder="CALLE Y NUMERO" required>
+              </div>
+    
+                <div class="form-group">
+                  <label for="guardian1Province">Provincia:</label>
+                  <input type="text" id="guardian1Province" name="PROVINCIA" placeholder="ESTADO DE LA REPUBLICA">
+                </div>
+    
+                <div class="form-group">
+                  <label for="codigoPostal">Código Postal:</label>
+                  <input type="text" id="codigoPostal" name="CODIGO POSTAL" placeholder="CP">
+                </div>
+    
+                <div class="form-group">
+                  <label for="guardian1WorkPhone">Teléfono de trabajo:</label>
+                  <input type="tel" id="guardian1WorkPhone" name="TELEFONO DE TRABAJO" placeholder="81-1234-5678" required>
+                </div>
+    
+                <div class="form-group">
+                  <label for="guardian1Mobile">Teléfono móvil:</label>
+                  <input type="tel" id="guardian1Mobile" name="TELEFONO MOVIL" placeholder="(81)-1234-5645">
+                </div>
+    
+                <div class="form-group">
+                  <label for="correo">Correo Electronico:</label>
+                  <input type="text" id="correo" name="CORREO ELECTRONICO" placeholder="EMAIL" required>
+                </div>
+
+              <div>
+                <h2>Referencias Bancarias</h2>
+
+                <div class="form-group">
+                  <label for="institucion">Institución 1:</label>
+                  <input type="text" id="institucion" name="INSTITUCION1" placeholder="INSTITUCION">
+              </div>
+              <div class="form-group">
+                  <label for="tipo-cuenta">Tipo de Cuenta:</label>
+                  <input type="text" id="tipo-cuenta" name="TIPO DE CUENTA1" placeholder="TIPO DE CUENTA">
+              </div>
+              <div class="form-group">
+                  <label for="numero">Número:</label>
+                  <input type="text" id="numero" name="NUMERO DE CUENTA1" placeholder="NUMERO">
+              </div>
+              <div class="form-group">
+                  <label for="saldo-promedio">Saldo Promedio:</label>
+                  <input type="text" id="saldo-promedio" name="SALDO PROMEDIO1" placeholder="$">
+              </div>
+              <div class="form-group">
+                  <label for="gerente">Gerente:</label>
+                  <input type="text" id="gerente" name="GERENTE1" placeholder="GERENTE">
+              </div>
+              <div class="form-group">
+                  <label for="telefono">Teléfono:</label>
+                  <input type="tel" id="telefono" name="TELEFONO1" placeholder="81-1234-5671">
+              </div>
+
+              <div class="form-group">
+                <label for="institucion">Institución 2:</label>
+                <input type="text" id="institucion" name="INSTITUCION1" placeholder="INSTITUCION">
+            </div>
+            <div class="form-group">
+                <label for="tipo-cuenta">Tipo de Cuenta:</label>
+                <input type="text" id="tipo-cuenta" name="TIPO DE CUENTA2" placeholder="TIPO DE CUENTA">
+            </div>
+            <div class="form-group">
+                <label for="numero">Número:</label>
+                <input type="text" id="numero" name="NUMERO DE CUENTA2" placeholder="NUMERO">
+            </div>
+            <div class="form-group">
+                <label for="saldo-promedio">Saldo Promedio:</label>
+                <input type="text" id="saldo-promedio" name="SALDO PROMEDIO2" placeholder="$">
+            </div>
+            <div class="form-group">
+                <label for="gerente">Gerente:</label>
+                <input type="text" id="gerente" name="GERENTE2" placeholder="GERENTE">
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="TELEFONO2" placeholder="81-1234-5671">
+            </div>
+              </div>
+        
+                <div>
+                    <h2>Referencias Comerciales</h2>
+                    <div class="form-group">
+                      <label for="proveedor1">Proveedor 1:</label>
+                      <input type="text" id="proveedor1" name="PROVEEDOR1" placeholder="PROVEEDOR">
+                  </div>
+                  <div class="form-group">
+                      <label for="contacto1">Nombre del Contacto:</label>
+                      <input type="text" id="contacto1" name="NOMBRE DEL CONTACTO1" placeholder="CONTACTO">
+                  </div>
+                  <div class="form-group">
+                      <label for="telefono1">Teléfono:</label>
+                      <input type="tel" id="telefono1" name="TELEFONO1" placeholder="81-1234-5674">
+                  </div>
+                  <div class="form-group">
+                      <label for="credito1">Línea de Crédito:</label>
+                      <input type="text" id="credito1" name="CREDITO1" placeholder="LIENA DE CREDITO">
+                  </div>
+                  <div class="form-group">
+                      <label for="plazo1">Plazo:</label>
+                      <input type="text" id="plazo1" name="PLAZO1" placeholder="PLAZO">
+                  </div>
+                  <div class="form-group">
+                      <label for="cliente1">Número de Cliente:</label>
+                      <input type="text" id="cliente1" name="NUMERO DE CLIENTE1" placeholder="NUMERO DE CLIENTE">
+                  </div>
+          
+                  <!-- Segundo conjunto de campos -->
+                  <div class="form-group">
+                      <label for="proveedor2">Proveedor 2:</label>
+                      <input type="text" id="proveedor2" name="PROVEEDOR2" placeholder="PROVEEDOR">
+                  </div>
+                  <div class="form-group">
+                      <label for="contacto2">Nombre del Contacto:</label>
+                      <input type="text" id="contacto2" name="NOMBRE DEL CONTACTO2" placeholder="NOMBRE DEL CONTACTO">
+                  </div>
+                  <div class="form-group">
+                      <label for="telefono2">Teléfono:</label>
+                      <input type="tel" id="telefono2" name="TELEFONO2" placeholder="81-1289-5671">
+                  </div>
+                  <div class="form-group">
+                      <label for="credito2">Línea de Crédito:</label>
+                      <input type="text" id="credito2" name="CREDITO2" placeholder="LINEA DE CREDITO">
+                  </div>
+                  <div class="form-group">
+                      <label for="plazo2">Plazo:</label>
+                      <input type="text" id="plazo2" name="PLAZO2" placeholder="PLAZO">
+                  </div>
+                  <div class="form-group">
+                      <label for="cliente2">Número de Cliente:</label>
+                      <input type="text" id="cliente2" name="NUMERO DE CLIENTE2" placeholder="NUMERO DE CLIENTE">
+                  </div>
+                  </div>
+        
+                <div>
+                    <h2>Línea De Crédito Solicitado</h2>
+                    <div class="form-group">
+                      <label for="monto">Monto:</label>
+                      <input type="number" id="monto" name="MONTO DE DINERO" placeholder="0.0">
+                  </div>
+                  <div class="form-group">
+                      <label for="plazo">Plazo:</label>
+                      <input type="text" id="plazo" name="PLAZO DE LINEA DE CREDITO" placeholder="PLAZO">
+                  </div>
+                  </div><br>
+      
+            <button type="button" onclick="printForm()">Imprimir Formulario</button>
+            <input type="submit" value="Enviar por correo electrónico">
+            
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function toggleForms() {
+    const tipo = document.getElementById('tipo-persona').value;
+    document.getElementById('form-fisica').classList.toggle('oculto', tipo !== 'fisica');
+    document.getElementById('form-moral').classList.toggle('oculto', tipo !== 'moral');
+
+    const tipoPersona = document.getElementById('tipo-persona').value;
+      const socialSection = document.getElementById('social-section');
+      
+      if (tipoPersona === 'fisica' || tipoPersona === 'moral') {
+        socialSection.classList.add('hidden');
+      } else {
+        socialSection.classList.remove('hidden');
+      }
+}
+
+function printForm() {
+  window.print();
+}
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,201 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #425db4;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+canvas {
+  border: 1px dashed #ccc;
+  margin: 10px 0;
+  display: block;
+}
+
+button {
+  background-color: #1818d8;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: #0b179b;
+}
+
+input[type="submit"] {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+input[type="submit"]:hover {
+  background-color: #218838;
+}
+
+.oculto {
+  display: none;
+}
+
+.container {
+  position: relative;
+  border: 2px solid #ccc;
+  background-color: #fff;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.form-group input[type="checkbox"] {
+  width: auto;
+}
+.form-group textarea {
+  width: 100%;
+  height: 100px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+h2 {
+  text-align: center;
+  color: #00289f;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.opcion {
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+  padding: 10px; /* Espaciado */
+  border: 1px solid #cccccc; /* Borde por defecto */
+  border-radius: 10px; /* Esquinas redondeadas */
+}
+
+.opcion:hover {
+  background-color: #ebebeb; /* Color de fondo al pasar el cursor */
+  color: rgb(0, 0, 0); /* Color del texto al pasar el cursor */
+  border-color: #363738; /* Color del borde al pasar el cursor */
+  cursor: pointer;
+}
+
+.radiop {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.radiop label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.medium-image {
+  width: 300px; /* Ajusta el tamaño de la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border: 1px solid #ccc; /* Opcional: añade un borde a la imagen */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.medium-image:hover {
+  transform: scale(1.1); /* Aumenta el tamaño de la imagen */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra */
+}
+
+.image-container{
+  text-align: center;
+}
+
+ .ax {
+  background-image: linear-gradient(currentColor,currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: .3s all ease;
+ }
+
+ .ax:hover {
+  background-size: 100% 2px;
+  text-decoration: none;
+ }
+
+/* Cambiar color del borde del input al pasar el cursor */
+.form-group input:hover {
+    border-color: #425db4; /* Cambia el color del borde del input al pasar el cursor */
+}
+
+/* Cambiar color del borde del input al escribir */
+.form-group input:focus {
+    border-color: rgb(4, 4, 97); /* Cambia el color del borde del input al enfocarlo */
+}
+
+.social-section {
+  text-align: center;
+  margin-top: 20px;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espacio entre los iconos */
+  margin: 20px 10px; /* Margen alrededor de los iconos */
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease; /* Transición para la animación */
+}
+
+.social-icons img:hover {
+  transform: scale(1.2); /* Aumenta el tamaño del icono al pasar el ratón */
+}
+
+.hidden {
+  display: none;
+}
