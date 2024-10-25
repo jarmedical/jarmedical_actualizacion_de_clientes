@@ -199,3 +199,50 @@ h2 {
 .hidden {
   display: none;
 }
+
+  input[name="JAR MEDICAL"] {
+    display: none;
+  }
+
+  footer {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-top: 50px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten */
+}
+
+.footer-left {
+    flex: 0 0 auto; /* La imagen no se expandirá */
+}
+
+.footer-center {
+    flex: 1; /* Ocupa el espacio restante */
+    text-align: center; /* Centra el texto en móviles */
+    margin: 10px 0; /* Espacio en móviles */
+}
+
+.footer-right {
+    flex: 0 0 auto; /* La sección de derechos reservados no se expandirá */
+    text-align: right; /* Alineación a la derecha */
+}
+
+/* Estilo para móviles */
+@media (max-width: 600px) {
+    footer {
+        flex-direction: column; /* Cambia a columna en móviles */
+        align-items: center; /* Centra los elementos */
+    }
+    .footer-center {
+        text-align: center; /* Centra el texto */
+    }
+}
+
+/* Estilo para tablets y laptops */
+@media (min-width: 601px) {
+    .footer-center {
+        margin-left: 150px; /* Ajusta el margen en pantallas grandes */
+    }
+}
