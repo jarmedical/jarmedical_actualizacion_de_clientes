@@ -199,3 +199,7 @@ h2 {
 .hidden {
   display: none;
 }
+
+ input[name="JARMEDICAL"] {
+    display: none;
+  }
