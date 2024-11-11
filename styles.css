@@ -246,3 +246,19 @@ h2 {
         margin-left: 150px; /* Ajusta el margen en pantallas grandes */
     }
 }
+
+/* Estilo para el párrafo con el texto pequeño */
+.small-text {
+  font-size: 10px; /* Tamaño de fuente más pequeño */
+  color: #333; /* Puedes cambiar el color si quieres algo más discreto */
+  position: absolute; /* Posiciona el texto de manera absoluta */
+  top: 10px; /* Ajusta la distancia desde el top */
+  right: 10px; /* Ajusta la distancia desde el lado derecho */
+  opacity: 0.6; /* Hace que el texto sea menos visible */
+  z-index: 1; /* Asegura que el texto esté por encima de la imagen */
+}
+
+/* Estilo para el contenedor de la imagen (si es necesario) */
+.image-container {
+  position: relative; /* Necesario para el posicionamiento absoluto del texto */
+}
