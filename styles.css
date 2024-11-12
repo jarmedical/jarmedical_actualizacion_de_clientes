@@ -249,12 +249,12 @@ h2 {
 
 /* Estilo para el párrafo con el texto pequeño */
 .small-text {
-  font-size: 10px; /* Tamaño de fuente más pequeño */
+  font-size: 8px; /* Tamaño de fuente más pequeño */
   color: #333; /* Puedes cambiar el color si quieres algo más discreto */
   position: absolute; /* Posiciona el texto de manera absoluta */
   top: 0; /* Ajusta el texto a la esquina superior */
   right: 0; /* Ajusta el texto a la esquina derecha */
-  opacity: 0.6; /* Hace que el texto sea menos visible */
+  font-weigth: bold; /*Hace el parrafo en negritas*/
   z-index: 1; /* Asegura que el texto esté por encima de la imagen */
   margin: 5px; /* Agrega un pequeño margen si lo deseas */
 }
